@@ -1,0 +1,8 @@
+C:\Users\maggs\Desktop\loginReg\bin\Debug\netcoreapp1.1\loginReg.deps.json
+C:\Users\maggs\Desktop\loginReg\bin\Debug\netcoreapp1.1\loginReg.runtimeconfig.json
+C:\Users\maggs\Desktop\loginReg\bin\Debug\netcoreapp1.1\loginReg.runtimeconfig.dev.json
+C:\Users\maggs\Desktop\loginReg\bin\Debug\netcoreapp1.1\loginReg.dll
+C:\Users\maggs\Desktop\loginReg\bin\Debug\netcoreapp1.1\loginReg.pdb
+C:\Users\maggs\Desktop\loginReg\obj\Debug\netcoreapp1.1\loginReg.AssemblyInfo.cs
+C:\Users\maggs\Desktop\loginReg\obj\Debug\netcoreapp1.1\loginReg.dll
+C:\Users\maggs\Desktop\loginReg\obj\Debug\netcoreapp1.1\loginReg.pdb

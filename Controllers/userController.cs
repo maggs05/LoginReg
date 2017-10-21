@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using DbConnection;
-using System;
 using loginReg.Models;
 
-namespace loginReg {
+namespace loginReg
+{
     public class usersController : Controller {
      
         [HttpGet]
@@ -16,7 +14,7 @@ namespace loginReg {
 
         //registration button...
         [HttpPost]
-        [Route("Submit")] 
+        [Route("submit")] 
         public IActionResult Submit(userRegister Register){
             if(ModelState.IsValid){
 

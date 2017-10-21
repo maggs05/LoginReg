@@ -7,27 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    @model loginReg.Models.userRegister
+    @model loginReg.Models.Register
 
     <h1>Registration</h1>
-    <form action="/Submit" method="POST" asp-controller="User">
-        <span asp-validation-for="firstName"></span>
-        <label asp-for = "firstName" ></label>
-        <input type = "text" name="firstName" value= @Model.userRegister>
+    <form action="/submit" method="post">
+        <div class = "form-group">
+            <span asp-validation-for= "firstName"></span>
+            <label asp-for = "firstName" ></label>
+            <input type = "text" asp-for="firstName">
+        </div>
+            <label asp-for = "lastName" ></label>
+            <input type = "text" asp-for= "lastName">
 
-        <label asp-for = "lastName" ></label>
-        <input type = "text" asp-for= "lastName">
+            <label asp-for = "email" ></label>
+            <input asp-for = "email">
 
-        <label asp-for = "email" ></label>
-        <input asp-for = "email">
+            <label asp-for= "password" ></label>
+            <input type = "password" asp-for = "password">
 
-        <label asp-for= "password" ></label>
-        <input type = "password" asp-for = "password">
+            <label asp - for = "confPassword" ></label>
+            <input asp-for = "password">
 
-        <label asp - for = "confPassword" ></label>
-        <input asp-for = "password">
-
-        <input type="submit" value="Register Me!">
+            <input type="submit" value="Register Me!">
     </form>
 
     <h1>Login</h1>

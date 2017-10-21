@@ -11,18 +11,18 @@ namespace loginReg
             
             return View();
         }
-
-        //registration button...
-        [HttpPost]
-        [Route("submit")] 
-        public IActionResult Submit(userRegister Register){
-            if(ModelState.IsValid){
-
-                // userRegister(Register);
-                return RedirectToAction("Success");
-            }
-            return View("Index");
-        }
-
     }
 }
+        //registration button...
+        // [HttpPost]
+        // [Route("submit")] 
+    //     public IActionResult submit(userRegister Register){
+    //         if(ModelState.IsValid){
+
+    //             // Register(userRegister);
+                
+    //             return RedirectToAction("Index");
+    //         return View("Index");
+    //     }
+
+    // }

@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace loginReg.Models{
 
-    public class userRegister {
+    public class Register {
         
         [Required]
-        [Display(Name ="First Name: ")]
+        [Display(Name ="First Name")]
         [MinLength(2)]
         [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage="Name can only contain letters")]
         public string firstName {get;set;}
@@ -24,9 +24,16 @@ namespace loginReg.Models{
 
         [Required]
         [Display(Name = "Password: ")]
-        [MinLength(8)]
         [DataType(DataType.Password)]
+        [MinLength(8)]
         public string password {get;set;}
+
+        [Required]
+        [Display(Name = "Confirm Password: ")]
+        [DataType(DataType.Password)]
+        [MinLength(8)]
+        [Compare("password")]
+        public string confirm {get;set;}
 
     }
 }

@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-// using DbConnection;
+using DbConnection;
 using System;
+using loginReg.Models;
 
 namespace loginReg {
     public class usersController : Controller {
+     
         [HttpGet]
         [Route("")]
         public IActionResult Index(){
@@ -14,10 +16,14 @@ namespace loginReg {
 
         //registration button...
         [HttpPost]
-        [Route("Success")]
-        public IActionResult Success(string firstName, string lastName){
+        [Route("Submit")] 
+        public IActionResult Submit(userRegister Register){
+            if(ModelState.IsValid){
 
-            return View("Success");
+                // userRegister(Register);
+                return RedirectToAction("Success");
+            }
+            return View("Index");
         }
 
     }

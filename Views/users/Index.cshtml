@@ -7,24 +7,27 @@
     <title>Document</title>
 </head>
 <body>
+    @model loginReg.Models.userRegister
+
     <h1>Registration</h1>
-    <form action="/Success" method="POST">
-        <label name = "firstName" >First Name: </label>
-        <input type = "text" name = "firstName">
+    <form action="/Submit" method="POST" asp-controller="User">
+        <span asp-validation-for="firstName"></span>
+        <label asp-for = "firstName" ></label>
+        <input type = "text" asp-for = "firstName">
 
-        <label name = "lastName" >Last Name: </label>
-        <input type = "text" name = "lastName">
+        <label asp-for = "lastName" ></label>
+        <input type = "text" asp-for= "lastName">
 
-        <label name = "email" >Email: </label>
-        <input name = "email">
+        <label asp-for = "email" ></label>
+        <input asp-for = "email">
 
-        <label name = "password" >Password: </label>
-        <input type = "text" name = "password">
+        <label asp-for= "password" ></label>
+        <input type = "password" asp-for = "password">
 
-        <label name = "confPassword" >Confirm Password: </label>
-        <input name = "confPassword">
+        <label asp - for = "confPassword" ></label>
+        <input asp-for = "password">
 
-        <input type="button" value="Register Me!">
+        <input type="Submit" value="Register Me!">
     </form>
 
     <h1>Login</h1>
@@ -35,7 +38,7 @@
         <label name = "password" >Password: </label>
         <input type = "text" name = "password">
         
-        <input type="button" value="Log me in!">
+        <input type="submit" value="Log me in!">
     </form>
 </body>
 </html>

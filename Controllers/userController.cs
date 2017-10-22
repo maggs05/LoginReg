@@ -1,16 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
 using loginReg.Models;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
-namespace loginReg
+
+namespace loginReg.Controllers
+
 {
-    public class usersController : Controller {
+    public class UserController : Controller {
      
         [HttpGet]
         [Route("")]
         public IActionResult Index(){
             
             return View();
-        }
+        }     
     }
 }
         //registration button...

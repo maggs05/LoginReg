@@ -1,15 +1,15 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace loginReg.Models{
+namespace loginReg.Models
+{
 
     public class Register {
         
         [Required]
         [Display(Name ="First Name")]
         [MinLength(2)]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage="Name can only contain letters")]
-        public string firstName {get;set;}
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage= "Name can only contain letters")]
+        public string FirstName {get;set;}
         
         [Required]
         [Display(Name ="Last Name: ")]

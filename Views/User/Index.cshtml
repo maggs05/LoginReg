@@ -1,7 +1,7 @@
 
 @model loginReg.Models.Register
 <h1>Registration</h1>
-<form action="/submit" method="post" asp-controller="User">
+<form asp-action="/submit" method="post" asp-controller="User">
     <div class = "form-group">
         <span asp-validation-for= "FirstName"></span>
         <label asp-for="FirstName" ></label>

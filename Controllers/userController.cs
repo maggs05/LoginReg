@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 
 
 namespace loginReg.Controllers
@@ -18,17 +19,22 @@ namespace loginReg.Controllers
             return View();
         }     
     }
-}
+
         //registration button...
-        // [HttpPost]
-        // [Route("submit")] 
-    //     public IActionResult submit(userRegister Register){
-    //         if(ModelState.IsValid){
+        [HttpPost]
+        [Route("/submit")] 
+        public IActionResult submit(Register User)
+        {
+            if(ModelState.IsValid)
+            {
 
-    //             // Register(userRegister);
+                Register(User);
                 
-    //             return RedirectToAction("Index");
-    //         return View("Index");
-    //     }
+                return RedirectToAction("Success");
+            }
+            return View("Index");
+        
+        }
 
-    // }
+    
+}
